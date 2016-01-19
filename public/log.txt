@@ -1,0 +1,17 @@
+Overtrue\Wechat\Utils\Bag::__set_state(array(
+   'data' => 
+  array (
+    'signature' => '4a83e909b46011e761e5a74bd9eae9ab702ffb1f',
+    'timestamp' => '1443511994',
+    'nonce' => '2056779987',
+    'ToUserName' => 'gh_5ff5660e4f40',
+    'FromUserName' => 'okl6_vo2IPmaZk1zVDjmBXYn9xUk',
+    'CreateTime' => '1443511994',
+    'MsgType' => 'location',
+    'Location_X' => '23.098176',
+    'Location_Y' => '113.323777',
+    'Scale' => '15',
+    'Label' => '广州市海珠区赤岗T.I.T创意园(艺苑路东)',
+    'MsgId' => '6199836805822431317',
+  ),
+))
