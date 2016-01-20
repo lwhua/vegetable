@@ -24,6 +24,7 @@ abstract class Controller extends BaseController
     {
         $data = $this->repository->index();
 
+
         return view($this->viewName . '.index', $data);
     }
 
@@ -48,7 +49,7 @@ abstract class Controller extends BaseController
     {
         $this->repository->store(Request::all());
 
-        return redirect($this->viewName);
+        return redirect(str_replace('.', '/', $this->viewName));
     }
 
     /**
@@ -84,7 +85,7 @@ abstract class Controller extends BaseController
     {
         $this->repository->update($id, Request::all());
 
-        return redirect($this->viewName);
+        return redirect(str_replace('.', '/', $this->viewName));
     }
 
     /**
@@ -97,7 +98,7 @@ abstract class Controller extends BaseController
     {
         $this->repository->destroy($id);
 
-        return redirect($this->viewName);
+        return redirect(str_replace('.', '/', $this->viewName));
     }
 
 }

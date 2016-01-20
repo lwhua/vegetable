@@ -7,6 +7,20 @@
 @endsection
 
 @section('content')
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <a href="/admin">权限管理</a>
+            <i class="fa fa-circle"></i>
+        </li>
+        <li>
+            <span>用户管理</span>
+        </li>
+    </ul>
+    
+</div>
+<br>
+
 <div class="row">
     <div class="col-md-12">
         <!-- BEGIN EXAMPLE TABLE PORTLET-->
