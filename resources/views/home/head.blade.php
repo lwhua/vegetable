@@ -27,7 +27,7 @@
         <div class="container">
             <div class="header-top">            
                 <div class="logo">
-                    <a href="/"><img src="images/logo.png" alt=" " ></a>
+                    <a href="/"><img src="{{ asset('images/logo.png') }}" alt=" " ></a>
                 </div>
                 <div class="search-in">
                     <div class="header-grid">
@@ -60,7 +60,7 @@
                         
                         <li @if(Request::url() == url('product')) class="active" @endif><a href="{{url('product')}}" > 商品中心 </a></li>
                         <li @if(Request::url() == url('services')) class="active" @endif><a href="{{url('services')}}" > 服务中心 </a></li>
-                        <li @if(Request::url() == url('404')) class="active" @endif><a href="{{url('404')}}" > 每日一报 </a></li>
+                        <li @if(Request::url() == url('blog/daily')) class="active" @endif><a href="{{url('blog/daily')}}" > 每日一报 </a></li>
                         <li @if(Request::url() == url('blog')) class="active" @endif><a href="{{url('blog')}}" > 健康知识 </a></li>
                         <li @if(Request::url() == url('about')) class="active" @endif><a href="{{url('about')}}"> 关于我们 </a></li>
                         <!-- <li @if(Request::url() == url('contact')) class="active" @endif><a href="{{url('contact')}}" > 联系我们 </a></li> -->

@@ -144,11 +144,13 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-	/**
-	*微信
-	*/
-	Overtrue\LaravelWechat\ServiceProvider::class,
-	Illuminate\Html\HtmlServiceProvider::class,
+    	/**
+    	*微信
+    	*/
+    	Overtrue\LaravelWechat\ServiceProvider::class,
+    	Illuminate\Html\HtmlServiceProvider::class,
+        // 面包屑导航
+        DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
     ],
 
     /*
@@ -198,10 +200,12 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
-//	'Wechat' => Overtrue\LaravelWechat\Facades\Wechat::class,
-	'Wechat' => 'Overtrue\LaravelWechat\Facade',
-	'Html' => 'Illuminate\Html\HtmlFacade',
-	'Form' => 'Illuminate\Html\FormFacade',
+        //'Wechat' => Overtrue\LaravelWechat\Facades\Wechat::class,
+    	'Wechat' => 'Overtrue\LaravelWechat\Facade',
+    	'Html' => 'Illuminate\Html\HtmlFacade',
+    	'Form' => 'Illuminate\Html\FormFacade',
+        //面包屑导航
+        'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
     ],
 
 ];

@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title', '后台管理系统-用户管理')
 @section('css')
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <link href="{{asset('assets/global/plugins/datatables/datatables.min.css')}}" rel="stylesheet" type="text/css">
@@ -7,19 +8,6 @@
 @endsection
 
 @section('content')
-<div class="page-bar">
-    <ul class="page-breadcrumb">
-        <li>
-            <a href="/admin">权限管理</a>
-            <i class="fa fa-circle"></i>
-        </li>
-        <li>
-            <span>用户管理</span>
-        </li>
-    </ul>
-    
-</div>
-<br>
 
 <div class="row">
     <div class="col-md-12">
@@ -31,7 +19,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="btn-group">
-                                <a id="sample_editable_1_new" class="btn sbold green" href="{{ url('user/create') }}"> 
+                                <a id="sample_editable_1_new" class="btn sbold green" href="{{ url('admin/user/create') }}"> 
                                     新增
                                     <i class="fa fa-plus"></i>
 

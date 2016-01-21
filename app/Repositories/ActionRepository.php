@@ -33,7 +33,13 @@ class ActionRepository extends BaseRepository
         return array('actions' => $this->model->where('pid', 0)->with('children')->get());
     }
 
+    public function store($value='')
+    {
+        $action = parent::store($value);
+        Cache::forget('actions');
 
+        return $action;
+    }
     public function destroy($id)
     {
         $action = $this->getById($id);

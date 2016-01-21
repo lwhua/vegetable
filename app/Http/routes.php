@@ -18,8 +18,8 @@ Route::get('/employeers','Home\HomeController@employeers');
 Route::get('/contact','Home\HomeController@contact');
 Route::get('/product','Home\ProductController@index');
 Route::get('/services','Home\ServicesController@index');
-Route::get('/signup','Home\AuthController@register');
-Route::get('/signin','Home\AuthController@login');
+Route::get('/signup','Home\UserController@getCreate');
+Route::get('/signin','Home\UserController@getLogin');
 Route::get('/blog','Home\BlogController@index');
 Route::get('/404','Home\ErrorController@notfound');
 Route::get('/shopcart','Home\ShopCartController@index');
@@ -31,8 +31,8 @@ Route::any('/wechat', 'Wechat\WechatController@serve');
 /*
 *前台登录
 */
-Route::get('user/login', ['as' => 'login', 'uses' => 'Home\UserController@getLogin']);
-Route::post('user/login', ['as' => 'login', 'uses' => 'Home\UserController@postLogin']);
+Route::get('user/login', ['as' => 'sinin', 'uses' => 'Home\UserController@getLogin']);
+Route::post('user/login', ['as' => 'sinin', 'uses' => 'Home\UserController@postLogin']);
  
 // 需要登录验证才能操作的接口
 Route::group(array('before' => 'auth'), function()
@@ -49,11 +49,11 @@ Route::get('/admin', 'Admin\AuthController@login');
 
 Route::group(array('middleware' => 'permission'), function () {
 
-    Route::get('/admin/home', 'Admin\HomeController@index');
+    Route::get('/admin/home', ['as' => 'admin', 'uses' => 'Admin\HomeController@index']);
     Route::resource('/admin/user', 'Admin\UserController');
     Route::resource('/admin/role', 'Admin\RoleController');
     Route::resource('/admin/action', 'Admin\ActionController');
-    Route::resource('/admin/test1', 'Admin\Test1Controller');
-    Route::resource('/admin/test2', 'Admin\Test2Controller');
+    Route::resource('/admin/order', 'Admin\OrderController');
+    Route::resource('/admin/good', 'Admin\GoodController');
     Route::resource('/admin/config', 'Admin\ConfigController');
 });

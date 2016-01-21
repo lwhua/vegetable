@@ -4,7 +4,7 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo">
             <a href="/admin">
-                <img src="../../assets/layouts/layout/img/logo.png" alt="logo" class="logo-default"> </a>
+                <img src="{{asset('assets/layouts/layout/img/logo.png')}}" alt="logo" class="logo-default"> </a>
             <div class="menu-toggler sidebar-toggler"> </div>
         </div>
         
@@ -66,7 +66,7 @@
                                 <li>
                                     <a href="#">
                                         <span class="photo">
-                                            <img src="../../assets/layouts/layout/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                            <img src="{{asset('/assets/layouts/layout/img/avatar2.jpg')}}" class="img-circle" alt=""> </span>
                                         <span class="subject">
                                             <span class="from"> Lisa Wong </span>
                                             <span class="time">Just Now </span>
@@ -77,7 +77,7 @@
                                 <li>
                                     <a href="#">
                                         <span class="photo">
-                                            <img src="../../assets/layouts/layout/img/avatar3.jpg" class="img-circle" alt=""> </span>
+                                            <img src="{{asset('assets/layouts/layout/img/avatar3.jpg')}}" class="img-circle" alt=""> </span>
                                         <span class="subject">
                                             <span class="from"> Richard Doe </span>
                                             <span class="time">16 mins </span>
@@ -139,7 +139,7 @@
 
                 <li class="dropdown dropdown-user">
                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false">
-                        <img alt="" class="img-circle" src="../../assets/layouts/layout/img/avatar3_small.jpg">
+                        <img alt="" class="img-circle" src="{{asset('assets/layouts/layout/img/avatar3_small.jpg')}}">
                         <span class="username username-hide-on-mobile"> Nick </span>
                         <i class="fa fa-angle-down"></i>
                     </a>

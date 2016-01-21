@@ -10,7 +10,13 @@
             <div class="page-content-wrapper">
                 <!-- BEGIN CONTENT BODY -->
                 <div class="page-content">
-                    
+                    <div class="page-bar">
+                        <div class="page-breadcrumb">
+                            {!! Breadcrumbs::render() !!}
+                        </div>
+                        
+                    </div>
+                    <br>
                     @yield('content')
 
                 </div>

@@ -9,8 +9,8 @@
     <link href="{{asset('assets/global/plugins/font-awesome/css/font-awesome.min.css')}}"  rel="stylesheet" type="text/css"/>
     <link href="{{asset('assets/global/plugins/simple-line-icons/simple-line-icons.min.css')}}"  rel="stylesheet" type="text/css"/>
     <link href="{{asset('assets/global/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('assets/global/plugins/uniform/css/uniform.default.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css')}}" rel="stylesheet" type="text/css" />
+    <!-- <link href="{{asset('assets/global/plugins/uniform/css/uniform.default.css')}}" rel="stylesheet" type="text/css" /> -->
+    <!-- <link href="{{asset('assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css')}}" rel="stylesheet" type="text/css" /> -->
     <!-- END GLOBAL MANDATORY STYLES -->
     @yield('css')
     <!-- BEGIN THEME GLOBAL STYLES -->
@@ -22,5 +22,9 @@
     <link href="{{asset('assets/layouts/layout/css/themes/darkblue.min.css')}}" rel="stylesheet" type="text/css" id="style_color" />
     <link href="{{asset('assets/layouts/layout/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
 
-    <link rel="shortcut icon" href="favicon.ico" /> </head>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <style type="text/css">
+        .breadcrumb{background-color: white;}
+        .breadcrumb>li+li:before{content: ">>";}
+    </style>
 </head>

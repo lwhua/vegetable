@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title', '后台管理系统-用户管理')
 @section('content')
     <hr/>
     {!! Form::open(array('action'=>array('UserController@store'),'method'=>'POST','class'=>'am-form am-form-horizontal')) !!}

@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title', '后台管理系统-用户管理')
 @section('content')
     <hr/>
     {!! Form::model($model,array('action'=>array('UserController@update',$model->id),'method'=>'PUT','class'=>'am-form am-form-horizontal')) !!}

@@ -37,7 +37,7 @@
                 @if($action->children->isEmpty())
                     <li @if(Request::url() == action($action->action)) class="nav-item start active" @endif >
                         <a href="{{ action($action->action) }}" class="nav-link nav-toggle">
-                            <i class="icon-home"></i>
+                            <i class="{{ $action->prefix_class }}"></i>
                             <span class="title">{{ $action->action_name }}</span>
                             <!-- <span class="arrow"></span> -->
                             @if(Request::url() == action($action->action)) <span class="selected"></span> @endif
@@ -48,7 +48,7 @@
                 @else
                     <li class="nav-item">
                         <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-diamond"></i>
+                            <i class="{{ $action->prefix_class }}"></i>
                             <span class="title">{{ $action->action_name }}</span>
                             <span class="arrow"></span>
                             
@@ -57,6 +57,7 @@
                             @foreach($action->children as $subaction)
                             <li @if($subaction->action && Request::url() == action($subaction->action)) class="nav-item start active" @else class="nav-item" @endif>
                                 <a href="{{ action($subaction->action) }}" class="nav-link ">
+                                    
                                     <span class="title">{{ $subaction->action_name }}</span>
                                     
                                 </a>

@@ -45,10 +45,11 @@ class PermissionManager
         $currentAction = Route::currentRouteAction();
         $actions = [];
         if ($user->is_admin) {
-
-            $actions = Cache::rememberForever('actions',function(){
-                return ActionModel::where('pid', 0)->with('children')->get();
-            });
+            // Cache::forget('actions');
+            $actions = ActionModel::where('pid', 0)->with('children')->get();
+            // $actions = Cache::remember('actions',24*60,function(){
+            //     return ActionModel::where('pid', 0)->with('children')->get();
+            // });
             
         } else {
 

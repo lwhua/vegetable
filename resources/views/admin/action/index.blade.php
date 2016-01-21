@@ -1,18 +1,6 @@
 @extends('layouts.master')
+@section('title', '后台管理系统-权限管理')
 @section('content')
-<div class="page-bar">
-    <ul class="page-breadcrumb">
-        <li>
-            <a href="/admin">权限管理</a>
-            <i class="fa fa-circle"></i>
-        </li>
-        <li>
-            <span>操作管理</span>
-        </li>
-    </ul>
-    
-</div>
-<br>
 
 <div class="row">
 
@@ -21,7 +9,7 @@
             <div class="caption">
                 <i class="icon-wrench"></i></i>操作管理
                 <a href="{{ action('Admin\ActionController@create',array('pid'=>0)) }}"
-                   class="btn btn-default"><span class="icon-plus"></span> 添加
+                   class="btn btn-default blue"><span class="icon-plus"></span> 添加
                 </a>
             </div>
             <div class="tools">
@@ -44,15 +32,15 @@
                                     {!! Form::open(array('action'=>array('Admin\ActionController@destroy', $action->id),'method'=>'DELETE')) !!}
                                     <div class="btn-group ">
                                         <a href="{{ action('Admin\ActionController@create',array('pid'=>$action->id)) }}"
-                                           class="btn btn-default btn-xs text-secondary"><span
+                                           class="btn btn-default btn-sm blue "><span
                                                     class="icon-plus"></span> 添加
                                         </a>
                                         <a href="{{ action('Admin\ActionController@edit',array('pid'=>$action->id)) }}"
-                                           class="btn btn-default btn-xs text-secondary"><span
+                                           class="btn btn-default btn-sm blue "><span
                                                     class="icon-plus"></span> 编辑
                                         </a>
                                         <button type="submit"
-                                                class="btn btn-default btn-xs text-danger hide-sm-only">
+                                                class="btn btn-default btn-sm blue text-danger hide-sm-only">
                                             <span class="icon-trash"></span> 删除
                                         </button>
                                     </div>
@@ -76,14 +64,14 @@
                                                             {!! Form::open(array('action'=>array('Admin\ActionController@destroy', $subaction->id),'method'=>'DELETE')) !!}
                                                             
                                                             <a href="{{ action('Admin\ActionController@create',array('pid'=>$subaction->id)) }}"
-                                                               class="btn btn-default btn-xs text-secondary"><span
+                                                               class="btn btn-default btn-sm blue "><span
                                                                         class="icon-plus"></span> 添加
                                                             </a>
                                                             <a href="{{ action('Admin\ActionController@edit',array('pid'=>$subaction->id)) }}"
-                                                               class="btn btn-default btn-xs text-secondary"><span
+                                                               class="btn btn-default btn-sm blue "><span
                                                                         class="icon-plus"></span> 编辑
                                                             </a>
-                                                            <button class="btn btn-default btn-xs text-danger hide-sm-only">
+                                                            <button class="btn btn-default btn-sm blue text-danger hide-sm-only">
                                                                 <span class="icon-trash"></span> 删除
                                                             </button>
                                                             
@@ -106,10 +94,10 @@
 
                                                                 <div class="btn-group ">
                                                                     <a href="{{ action('Admin\ActionController@edit',array('pid'=>$subsubaction->id)) }}"
-                                                                       class="btn btn-default btn-xs text-secondary"><span
+                                                                       class="btn btn-default btn-sm blue "><span
                                                                                 class="icon-plus"></span> 编辑
                                                                     </a>
-                                                                    <button class="btn btn-default btn-xs text-danger hide-sm-only">
+                                                                    <button class="btn btn-default btn-sm blue text-danger hide-sm-only">
                                                                         <span class="icon-trash"></span> 删除
                                                                     </button>
                                                                 </div>

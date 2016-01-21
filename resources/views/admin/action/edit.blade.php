@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title', '后台管理系统-权限管理')
 @section('content')
 <div class="page-bar">
     <ul class="page-breadcrumb">

@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title', '后台管理系统-角色管理')
 @section('content')
     <hr/>
     {!! Form::open(array('action'=>array('Admin\RoleController@store'),'method'=>'POST','class'=>'am-form am-form-horizontal')) !!}
