@@ -55,5 +55,7 @@ Route::group(array('middleware' => 'permission'), function () {
     Route::resource('/admin/action', 'Admin\ActionController');
     Route::resource('/admin/order', 'Admin\OrderController');
     Route::resource('/admin/good', 'Admin\GoodController');
+    Route::resource('/admin/category', 'Admin\CategoryController');
+    Route::get('/admin/attr', ['as' => 'attr', 'uses' => 'Admin\CategoryController@attr']);
     Route::resource('/admin/config', 'Admin\ConfigController');
 });

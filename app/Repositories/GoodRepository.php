@@ -1,6 +1,7 @@
 <?php
 namespace App\Repositories;
 use App\Models\GoodsModel;
+use App\Models\GoodsCategoryModel;
 class GoodRepository extends BaseRepository
 {
     protected $name = 'goods';
@@ -26,7 +27,6 @@ class GoodRepository extends BaseRepository
     public function store($value='')
     {
         $goods = parent::store($value);
-        Cache::forget('goods');
 
         return $goods;
     }
@@ -48,6 +48,7 @@ class GoodRepository extends BaseRepository
     {
         return $this->model->where('pid', 0)->get();
     }
+
 
 }
 

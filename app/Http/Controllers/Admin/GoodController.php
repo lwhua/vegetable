@@ -2,7 +2,7 @@
 /**
  * 商品管理页面
  */
-use App\Http\Requests;
+// use App\Http\Requests;
 use App\Http\Controllers\Admin\Controller;
 use App\Repositories\GoodRepository;
 
@@ -29,6 +29,10 @@ class GoodController extends Controller {
  //        return view('admin.test2');
 	// }
 
-	
+	public function category()
+	{
+		$tree = $this->repository->category(0);
+		dd($tree);
+	}
 
 }

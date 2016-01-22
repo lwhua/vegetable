@@ -87,7 +87,42 @@ Breadcrumbs::register('admin.role.index', function($breadcrumbs)
 Breadcrumbs::register('admin.action.index', function($breadcrumbs)
 {
     $breadcrumbs->parent('admin');
-    $breadcrumbs->push('行为管理', route('admin.action.index'));
+    $breadcrumbs->push('菜单管理', route('admin.action.index'));
 });
 
+Breadcrumbs::register('admin.action.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.action.index');
+    $breadcrumbs->push('添加菜单', route('admin.action.create'));
+});
+
+Breadcrumbs::register('admin.action.edit', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.action.index');
+    $breadcrumbs->push('编辑菜单', route('admin.action.edit'));
+});
+
+Breadcrumbs::register('admin.category.index', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin');
+    $breadcrumbs->push('商品分类', route('admin.category.index'));
+});
+
+Breadcrumbs::register('admin.category.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.category.index');
+    $breadcrumbs->push('商品分类', route('admin.category.create'));
+});
+
+Breadcrumbs::register('admin.category.edit', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.category.index');
+    $breadcrumbs->push('商品分类', route('admin.category.edit'));
+});
+
+Breadcrumbs::register('attr', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.category.index');
+    $breadcrumbs->push('商品属性', route('attr'));
+});
 

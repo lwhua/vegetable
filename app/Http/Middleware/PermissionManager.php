@@ -42,6 +42,7 @@ class PermissionManager
         }
 
         $user = Auth::user();
+
         $currentAction = Route::currentRouteAction();
         $actions = [];
         if ($user->is_admin) {
@@ -65,6 +66,7 @@ class PermissionManager
         }
 
         View::share('actions', $actions);
+        View::share('user_name', $user->user_name);
 
         return $next($request);
     }

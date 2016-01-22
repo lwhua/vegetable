@@ -1,23 +1,11 @@
 @extends('layouts.master')
 @section('title', '后台管理系统-权限管理')
 @section('content')
-<div class="page-bar">
-    <ul class="page-breadcrumb">
-        <li>
-            <a href="/admin">权限管理</a>
-            <i class="fa fa-circle"></i>
-        </li>
-        <li>
-            <span>操作管理</span>
-        </li>
-    </ul>
-    
-</div>
-<br>
+
 <div class="container">
 <div class="row">
     {!! Form::open(array('action'=>array('Admin\ActionController@store'),'method'=>'POST','class'=>'form form-horizontal')) !!}
-    <div class="g">
+
         <div class="col-sm-12 col-md-8 ">
             <div class="form-group">
                 <label for="role_name" class="col-sm-3 form-label">操作名称</label>
@@ -32,7 +20,7 @@
                 <label for="description" class="col-sm-3 form-label">命名空间</label>
 
                 <div class="col-sm-9">
-                    {!! Form::text('action_namespace', null, array('placeholder'=>'App\Http\Controllers')) !!}
+                    {!! Form::text('action_namespace', 'App\Http\Controllers\Admin', array('placeholder'=>'App\Http\Controllers\Admin')) !!}
                     <small></small>
                 </div>
             </div>
@@ -59,7 +47,7 @@
                 <label for="description" class="col-sm-3 form-label">action</label>
 
                 <div class="col-sm-9">
-                    {!! Form::text('action',null,array('placeholder'=>'TestController@index')) !!}
+                    {!! Form::text('action','Admin\\',array('placeholder'=>'Admin\TestController@index')) !!}
                     <small></small>
                 </div>
             </div>
@@ -90,7 +78,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
     {!! Form::close() !!}
     </div>
     </div>

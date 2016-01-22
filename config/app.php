@@ -151,6 +151,8 @@ return [
     	Illuminate\Html\HtmlServiceProvider::class,
         // 面包屑导航
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
+        // 购物车
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
     ],
 
     /*
@@ -200,12 +202,15 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
-        //'Wechat' => Overtrue\LaravelWechat\Facades\Wechat::class,
+        // 微信辅助类
     	'Wechat' => 'Overtrue\LaravelWechat\Facade',
+        // 表单辅助函数
     	'Html' => 'Illuminate\Html\HtmlFacade',
     	'Form' => 'Illuminate\Html\FormFacade',
         //面包屑导航
         'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
+        // 购物车类 https://github.com/Crinsane/LaravelShoppingcart
+        'Cart' => 'Gloudemans\Shoppingcart\Facades\Cart',
     ],
 
 ];

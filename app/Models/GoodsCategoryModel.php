@@ -14,6 +14,19 @@ class GoodsCategoryModel extends BaseModel
         
     );
 
-    
+    public function goods()
+    {
+        $this->belongsTo('App\Models\GoodsModel');
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo('\App\Models\GoodsCategoryModel','category_pid','id');
+    }
+
+    public function children()
+    {
+        return $this->hasMany('\App\Models\GoodsCategoryModel','category_pid','id');
+    }
 
 }

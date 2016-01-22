@@ -143,4 +143,8 @@
 <script src="{{asset('assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('assets/global/plugins/ckeditor/ckeditor.js')}}" type="text/javascript"></script>
 <script src="{{asset('assets/pages/scripts/form-validation.min.js')}}" type="text/javascript"></script>
+<script type="text/javascript">
+    
+    
+</script>
 @endsection('script')

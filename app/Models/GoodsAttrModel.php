@@ -13,6 +13,9 @@ class GoodsAttrModel extends BaseModel
         
     );
 
-    
+    public function goods()
+    {
+        $this->belongsTo('App\Models\GoodsModel');
+    }
 
 }

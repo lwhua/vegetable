@@ -36,7 +36,7 @@ class ActionRepository extends BaseRepository
     public function store($value='')
     {
         $action = parent::store($value);
-        Cache::forget('actions');
+        // Cache::forget('actions');
 
         return $action;
     }
