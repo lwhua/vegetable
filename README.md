@@ -7,5 +7,5 @@
 预览：
 
 
-![image](https://github.com/lwhua/vegetable/master/public/Screenshot/首页.png)
-![image](https://github.com/lwhua/vegetable/master/public/Screenshot/蔬菜后台管理系统.png)
+![image](https://github.com/lwhua/vegetable/blob/master/public/ScreenShot/%E9%A6%96%E9%A1%B5.png)
+![image](https://github.com/lwhua/vegetable/blob/master/public/ScreenShot/%E8%94%AC%E8%8F%9C%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F.png)
