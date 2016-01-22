@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Repositories\UserRepository;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Admin\Controller;
 class UserController extends Controller
 {
 

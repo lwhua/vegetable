@@ -27,22 +27,22 @@ class GoodsModel extends BaseModel
 
     public function brand()
     {
-        $this->belongTo('App\Models\GoodsBrandModel','brand_id','good_brand_id');
+        $this->hasOne('App\Models\GoodsBrandModel','brand_id','good_brand_id');
     }
 
     public function category()
     {
-        $this->belongTo('App\Models\GoodsCategoryModel','cid','id');
+        $this->hasOne('App\Models\GoodsCategoryModel','cid','id');
     }
 
     public function provider()
     {
-        $this->belongTo('App\Models\GoodsProviderModel','provider_id','id');
+        $this->hasOne('App\Models\GoodsProviderModel','provider_id','id');
     }
 
     public function attr()
     {
-        $this->belongToMany('App\Models\GoodsAttrModel','attr_name','provider_id','id');
+        $this->hasMany('App\Models\GoodsAttrModel','attr_id','id');
     }
 
 }

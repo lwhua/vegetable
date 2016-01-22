@@ -10,6 +10,9 @@ class GoodsBrandModel extends BaseModel
         
     );
 
-    
+    public function goods()
+    {
+        $this->belongsTo('App\Models\GoodsModel');
+    }
 
 }

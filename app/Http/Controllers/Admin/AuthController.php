@@ -2,7 +2,7 @@
 
 use Request;
 use Auth;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Admin\Controller;
 
 class AuthController extends Controller
 {

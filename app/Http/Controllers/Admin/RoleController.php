@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Repositories\RoleRepository;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Admin\Controller;
 
 class RoleController extends Controller
 {
